@@ -1,0 +1,10 @@
+type Picture {
+    id: ID!
+    mimeType: String!
+    binaryContent: String!
+    name: String
+}
+
+extend type Mutation {
+    upload(mimeType: String!, binaryContent: String!, name: String!): Picture!
+}

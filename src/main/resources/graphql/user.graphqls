@@ -4,7 +4,9 @@ type User {
     username: String!
     password: String!
     github: String!
-    token: String
+    token: String,
+    location: Location
+    picture: Picture
 }
 
 type Query {
