@@ -55,6 +55,9 @@ public class User implements java.io.Serializable {
     @OneToOne
     private Picture picture;
 
+    public User() {
+    }
+
     public User(String email, String username, String password, String github, String token) {
         this.email = email;
         this.username = username;
