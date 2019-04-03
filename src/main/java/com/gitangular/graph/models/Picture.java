@@ -28,6 +28,9 @@ public class Picture implements java.io.Serializable {
     @Column(name = "identifier", nullable = true)
     private String name;
 
+    public Picture() {
+    }
+
     public Picture(String mimeType, String binaryContent, String name) {
         this.mimeType = mimeType;
         this.binaryContent = binaryContent;

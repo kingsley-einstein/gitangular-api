@@ -26,6 +26,9 @@ public class Location implements java.io.Serializable {
     @Column(name = "longitude", nullable = false)
     private Integer longitude;
 
+    public Location() {
+    }
+
     public Location(Integer latitude, Integer longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
