@@ -12,7 +12,7 @@ type User {
 type Query {
     byId(id: ID!): User!
     byToken(token: String!): User!
-    log(email: String!, password: String!): User!
+    log(username: String!, password: String!): User!
 }
 
 type Mutation {
