@@ -6,5 +6,5 @@ type Picture {
 }
 
 extend type Mutation {
-    upload(mimeType: String!, binaryContent: String!, name: String!): Picture!
+    upload(user: ID!, mimeType: String!, binaryContent: String!, name: String!): Picture!
 }

@@ -22,7 +22,7 @@ public class Picture implements java.io.Serializable {
     @Column(name = "format", nullable = false)
     private String mimeType;
 
-    @Column(name = "content", columnDefinition = "mediumBlob", nullable = false)
+    @Column(name = "content", columnDefinition = "mediumBlob", nullable = false, unique = true)
     private String binaryContent;
 
     @Column(name = "identifier", nullable = true)

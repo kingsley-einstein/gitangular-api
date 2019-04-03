@@ -10,13 +10,13 @@ type User {
 }
 
 type Query {
-    findById(id: ID!): User!
-    findByToken(token: String!): User!
+    byId(id: ID!): User!
+    byToken(token: String!): User!
     log(email: String!, password: String!): User!
 }
 
 type Mutation {
     create(email: String!, username: String!, password: String!, github: String!): User!
-    update(email: String!, password: String!): User!
+    update(id: ID!, email: String!, password: String!): User!
     delete(id: ID!): Boolean!
 }

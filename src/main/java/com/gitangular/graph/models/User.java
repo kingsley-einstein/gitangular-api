@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
@@ -46,13 +47,19 @@ public class User implements java.io.Serializable {
     @Column(name = "token")
     private String token;
 
+    @JoinColumn(name = "location_id")
     @OneToOne
     private Location location;
 
-    public User(String email, String username, String password, String github) {
+    @JoinColumn(name = "picture_id", unique = true)
+    @OneToOne
+    private Picture picture;
+
+    public User(String email, String username, String password, String github, String token) {
         this.email = email;
         this.username = username;
         this.password = password;
         this.github = github;
+        this.token = token;
     }
 }
