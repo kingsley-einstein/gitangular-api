@@ -36,7 +36,7 @@ public class Mutation implements GraphQLMutationResolver {
 
     public User create(String email, String username, String password, String github) {
         User user = new User(email, username, encoder.encode(password), github,
-                BCrypt.hashpw(UUID.randomUUID().toString(), hasher));
+                BCrypt.hashpw(UUID.randomUUID().toString() + "" + hasher, BCrypt.gensalt()));
 
         return userRepository.save(user);
     }
