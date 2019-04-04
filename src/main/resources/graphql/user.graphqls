@@ -12,6 +12,7 @@ type User {
 type Query {
     byId(id: ID!): User!
     byToken(token: String!): User!
+    allUsers(page: Int!): [User!]
     log(username: String!, password: String!): User!
 }
 
