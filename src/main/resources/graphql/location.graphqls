@@ -1,9 +1,9 @@
 type Location {
     id: ID!
-    latitude: Int!
-    longitude: Int!
+    latitude: Float!
+    longitude: Float!
 }
 
 extend type Mutation {
-    newLocation(user: ID!, latitude: Int!, longitude: Int!): Location!
+    newLocation(user: ID!, latitude: Float!, longitude: Float!): Location!
 }

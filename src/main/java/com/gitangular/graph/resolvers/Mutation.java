@@ -65,7 +65,7 @@ public class Mutation implements GraphQLMutationResolver {
         return savedPicture;
     }
 
-    public Location newLocation(Long user, Integer latitude, Integer longitude) {
+    public Location newLocation(Long user, Float latitude, Float longitude) {
         User theUser = userRepository.findById(user).get();
         Location location = theUser.getLocation();
 

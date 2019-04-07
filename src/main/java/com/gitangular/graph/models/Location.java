@@ -21,15 +21,15 @@ public class Location implements java.io.Serializable {
     private Long id;
 
     @Column(name = "latitude", nullable = false)
-    private Integer latitude;
+    private Float latitude;
 
     @Column(name = "longitude", nullable = false)
-    private Integer longitude;
+    private Float longitude;
 
     public Location() {
     }
 
-    public Location(Integer latitude, Integer longitude) {
+    public Location(Float latitude, Float longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }
